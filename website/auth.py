@@ -63,7 +63,7 @@ def sign_up():
             db.session.commit() # Update database
 
             flash("Account created!", category='success')
-            login_user(user, remember = True) # Remember user until session has been cleared
+            login_user(new_user, remember = True) # Remember user until session has been cleared
 
             return redirect(url_for("views.home")) # Redirect to home page after POST request
 
